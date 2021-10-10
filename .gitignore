@@ -1,2 +1,4 @@
 /bootcamp_env
 /.ipynb_checkpoints
+/venv
+**/__pycache__
