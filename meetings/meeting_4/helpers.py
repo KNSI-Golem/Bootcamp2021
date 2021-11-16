@@ -3,6 +3,18 @@ from sklearn.linear_model import LogisticRegression
 from sklearn.metrics import accuracy_score
 
 
+
+def evaluate_test(preds):
+
+    labels = pd.read_csv("data/test_labels.csv")
+    assert len(preds) == len(labels)
+    acc = accuracy_score(labels, preds)
+
+    return acc
+
+
+
+
 def get_score(train_X: pd.DataFrame,
               test_X: pd.DataFrame,
               train_y: pd.DataFrame,
